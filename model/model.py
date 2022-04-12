@@ -313,12 +313,6 @@ class UniterEncoder(nn.Module):
 
 
 class UniterModel(UniterPreTrainedModel):
-    """ Modification for Joint Vision-Language Encoding
-        KevinHwang: UniterModel 的主模块，首先是在构造函数中
-        先进行 UniterTextEmbeddings、UniterImageEmbeddings、
-        UniterEncoder 等类的初始化。分仅有 text ，仅有 image 或者
-        既有 text 又有 image 三种情况构造 embedding layer。
-    """
 
     def __init__(self, config, img_dim):
         super().__init__(config)
